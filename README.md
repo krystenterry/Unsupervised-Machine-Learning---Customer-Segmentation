@@ -53,9 +53,23 @@ for i in columns:
     sns.boxplot(data=df, x='Gender', y= df[i], hue='Gender')
 ```
 
+- **Bivariate Analysis**: Understand the data by using Scatter Plots, Pair Plots and KDE Plots.
 
+```python
+sns.scatterplot(data=df, x= 'Annual Income (k$)', y = 'Spending Score (1-100)')
+```
+```python
+sns.pairplot(df)
+```
+```python
+sns.pairplot(df, hue='Gender')
+```
 
-
+Grouping the Age, Annual Income and Spending score by gender shows us that, while men tend to have higher average annual incomes, women exhibit higher average spending scores.
+```python
+df.groupby('Gender')[[ 'Age', 'Annual Income (k$)','Spending Score (1-100)']].mean()
+```
+<img width="853" height="264" alt="image" src="https://github.com/user-attachments/assets/f8aeca8c-c9aa-43e7-b395-9238a74ce7a0" />
 
 ## Findings
 
