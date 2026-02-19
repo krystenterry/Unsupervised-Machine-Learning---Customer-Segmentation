@@ -173,20 +173,40 @@ df.groupby('Spending and Income Cluster')[['Age', 'Annual Income (k$)', 'Spendin
 
 -**Multivariate Clustering** : Using a K-Means model, 
 ```python
-df.groupby('Spending and Income Cluster')[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].mean()
+from sklearn.preprocessing import StandardScaler
 ```
 ```python
-df.groupby('Spending and Income Cluster')[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].mean()
+scale = StandardScaler()
 ```
 ```python
-df.groupby('Spending and Income Cluster')[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].mean()
+dff = pd.get_dummies(df,drop_first=True)
+dff.head()
 ```
 ```python
-df.groupby('Spending and Income Cluster')[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].mean()
+dff = dff[['Age', 'Annual Income (k$)', 'Spending Score (1-100)', 'Gender_Male']]
+dff.head()
 ```
 ```python
-df.groupby('Spending and Income Cluster')[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].mean()
+dff = scale.fit_transform(dff)
 ```
+```python
+dff = pd.DataFrame(scale.fit_transform(dff))
+```
+```python
+inertia_scores3=[]
+for i in range (1,11):
+    kmeans3=KMeans(n_clusters=i)
+    kmeans3.fit(dff)
+    inertia_scores3.append(kmeans3.inertia_)
+plt.plot(range(1,11),inertia_scores3)
+```
+```python
+dff = scale.fit_transform(dff)
+```
+```python
+df.to_csv('Clustering.csv')
+```
+
 ## Findings
 
 - **Cluster**: Target Marketing Group would be Cluster 3, which has a high Spending Score and high income.
