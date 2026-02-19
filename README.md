@@ -92,7 +92,9 @@ df[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].corr()
 <img width="989" height="237" alt="image" src="https://github.com/user-attachments/assets/259a560f-a809-4e7e-9cda-164e98f58bde" />
 
 
+### 3. Clustering - Univariate, Bivariate and Multivariate
 
+-**Univariate Clustering** : Using a K-Means model, 
 
 
 ## Findings
