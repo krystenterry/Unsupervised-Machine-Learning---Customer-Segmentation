@@ -1,4 +1,4 @@
-# Python/Unsupervised Machine Learning Customer Segmentation Project
+# k-Means Clustering : Customer Segmentation
 
 ## Project Overview
 
