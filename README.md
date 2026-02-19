@@ -2,6 +2,7 @@
 
 ## Project Overview
 
+
 To understand the Target Customers for the Marketing Team to plan a strategy, I segmented customer data utilizing the following techniques:
 
 1. **Bivariate Analysis/Bivariate Clustering**
@@ -12,6 +13,7 @@ With these techniques, I identified the most important shopping groups based on 
 
 ## Objectives
 
+
 1. **Perform EDA**
 2. **Use KMEANS Clustering Algorithm to Create Segments**
 3. **Use Summary Statistics on the Clusters**
@@ -19,9 +21,12 @@ With these techniques, I identified the most important shopping groups based on 
 
 ## Project Structure
 
+
 ### 1. Importing Required Libraries
 
 The project begins by importing the required libraries for data analysis, visualization, and clustering and then importing the data.
+
+
 
 ```python
 import pandas as pd
@@ -36,9 +41,12 @@ warnings.filterwarnings('ignore')
 df = pd.read_csv("Mall_Customers.csv")
 ```
 
+
+
 ### 2. Data Analysis and Findings
 
 - **Univariate Analysis**: Understand the data by using Histograms, Probability Density Plots and KDE Plots.
+  
 
 ```python
 sns.distplot(df['Annual Income (k$)']);
@@ -53,7 +61,11 @@ for i in columns:
     sns.boxplot(data=df, x='Gender', y= df[i], hue='Gender')
 ```
 
+
+
 - **Bivariate Analysis**: Understand the data by using Scatter Plots, Pair Plots and KDE Plots.
+
+  
 
 ```python
 sns.scatterplot(data=df, x= 'Annual Income (k$)', y = 'Spending Score (1-100)')
@@ -65,11 +77,15 @@ sns.pairplot(df)
 sns.pairplot(df, hue='Gender')
 ```
 
+
+
 Grouping the Age, Annual Income and Spending score by gender shows us that, while men tend to have higher average annual incomes, women exhibit higher average spending scores.
 ```python
 df.groupby('Gender')[[ 'Age', 'Annual Income (k$)','Spending Score (1-100)']].mean()
 ```
 <img width="853" height="264" alt="image" src="https://github.com/user-attachments/assets/f8aeca8c-c9aa-43e7-b395-9238a74ce7a0" />
+
+
 
 ## Findings
 
