@@ -10,37 +10,26 @@ In this project, I performed customer segmentation on a specific group of mall c
 
 ## Objectives
 
-1. **Set up libaries and import customer data**
-2. **Univariate Analysis**
-3. **Bivariate Analysis**
-4. **Clustering : Univariate, Bivariate and Multivariate**
+1. **Import Libaries and Dataset**
+2. **Conduct Univariate Analysis on Each Feature**
+3. **Conduct Bivariate Analysis on Multiple Features**
+4. **Cluster the Data into Customer Segments through Univariate, Bivariate and Multivariate Analysis**
 5. **Transform Data into Business Insights**
 
 ## Project Structure
 
-### 1. Database Setup
+### 1. Importing Required Libraries
 
-- **Database Creation**: The project starts by creating a database named `retail_sales_database`.
-- **Table Creation**: I created a table named `retail_sales` to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+The project begins with importing the required libraries for data analysis, visualization, and clustering.
 
-```sql
-CREATE DATABASE retail_sales_database;
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
-DROP TABLE IF EXISTS retail_sales;
-CREATE TABLE retail_sales
-	(
-		transaction_id	INT PRIMARY KEY,
-		sale_date DATE,
-		sale_time TIME,	
-		customer_id	INT,
-		gender VARCHAR(15),	
-		age INT,
-		category VARCHAR(15),	
-		quantity	INT,
-		price_per_unit FLOAT,
-		cogs FLOAT,	
-		total_sale FLOAT
-	);
+import warnings 
+warnings.filterwarnings('ignore')
 ```
 
 ### 2. Data Exploration & Cleaning
