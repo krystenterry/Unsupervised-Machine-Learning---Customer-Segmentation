@@ -1,8 +1,8 @@
-# Customer Segmentation Python/Machine Learning Project
+# Python/Unsupervised Machine Learning Customer Segmentation Project
 
 ## Project Overview
 
-In this project, I performed customer segmentation on a specific group of mall customers utilizing the following techniques:
+In this project, I segmented customer data on a specific group of mall customers to identify the best marketing group utilizing the following techniques:
 
 1. **Bivariate Analysis/Bivariate Clustering**
 2. **K-Means Algorithm and the Elbow Methodology**
@@ -14,7 +14,7 @@ In this project, I performed customer segmentation on a specific group of mall c
 2. **Conduct Univariate Analysis on Each Feature**
 3. **Conduct Bivariate Analysis on Multiple Features**
 4. **Cluster the Data into Customer Segments through Univariate, Bivariate and Multivariate Analysis**
-5. **Transform Data into Business Insights**
+5. **Identify the Best Marketing Group within the Dataset**
 
 ## Project Structure
 
