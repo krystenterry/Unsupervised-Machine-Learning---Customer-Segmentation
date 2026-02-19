@@ -85,6 +85,14 @@ df.groupby('Gender')[[ 'Age', 'Annual Income (k$)','Spending Score (1-100)']].me
 ```
 <img width="853" height="264" alt="image" src="https://github.com/user-attachments/assets/f8aeca8c-c9aa-43e7-b395-9238a74ce7a0" />
 
+A correlation analysis between Age, Annual Income, and Spending Score reveals that income and spending score are largely independent, suggesting that high-spending customers exist across income levels. Age shows a slight negative correlation with spending score, indicating that younger customers tend to spend more, while income and age are essentially uncorrelated.
+```python
+df[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].corr()
+```
+<img width="989" height="237" alt="image" src="https://github.com/user-attachments/assets/259a560f-a809-4e7e-9cda-164e98f58bde" />
+
+
+
 
 
 ## Findings
